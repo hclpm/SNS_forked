@@ -47,7 +47,7 @@ def index():
             pc.container(height= '10px'),
             pc.container(
                 pc.text(
-                    'Please log in to access ONESTARGRAM.',
+                    'Start a strong social network service!',
                     style= {
                         "fontSize": "15px",
                         "letterSpacing": "2px",
@@ -58,7 +58,7 @@ def index():
             ),
             pc.container(
                 pc.image(
-                    src="onestar.ico",
+                    src="favicon.ico",
                     alt="star",
                     style={"width": "100px", "height": "120px"},
                 ),
@@ -71,7 +71,7 @@ def index():
                     '비밀번호를 잊어버리셨나요?',
                     style = {
                         'fontSize':'12px',
-                        'color':'blue',
+                        'color':'black',
                         'textAlign':'end',
                     },
                 ),

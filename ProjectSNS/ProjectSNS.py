@@ -58,8 +58,8 @@ def index():
             ),
             pc.container(
                 pc.image(
-                    src="onestar2.ico",
-                    alt="노란별",
+                    src="onestar.ico",
+                    alt="star",
                     style={"width": "100px", "height": "120px"},
                 ),
                 center_content=True,

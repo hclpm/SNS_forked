@@ -54,17 +54,17 @@ sx={{"width": "500px", "height": "75vh", "bg": "#ffffff", "borderRadius": "15px"
 <Container><Text sx={{"fontSize": "25px", "fontWeight": "bolder", "letterSpacing": "5px", "fontFamily": "Georgia, Serif", "background": "-webkit-linear-gradient(-45deg, #fa0000, #f0b46c)", "-webkit-background-clip": "text", "color": "transparent", "centerContent": true}}>{`ONESTARGRAM`}</Text></Container></VStack>
 <VStack><Container sx={{"height": "10px"}}/>
 <Container><Text sx={{"fontSize": "15px", "letterSpacing": "2px", "color": "black", "centerContent": true}}>{`Please log in to access ONESTARGRAM.`}</Text></Container>
-<Container centerContent={true}><Image src="onestar2.ico"
-sx={{"width": "100px", "height": "120px", "alt": "\ub178\ub780\ubcc4"}}/></Container>
+<Container centerContent={true}><Image src="onestar.ico"
+sx={{"width": "100px", "height": "120px", "alt": "star"}}/></Container>
 <Container sx={{"borderBottom": "0.3px solid green", "width": "300px", "height": "43px"}}><HStack><EmailIcon sx={{"color": "green", "fontSize": "12px"}}/>
-<Input placeholder="Email"
-focusBorderColor="black"
+<Input focusBorderColor="black"
 type="text"
+placeholder="Email"
 sx={{"border": "0px", "fontWeight": "semibold", "fontSize": "13px", "type": ""}}/></HStack></Container>
 <Container sx={{"borderBottom": "0.3px solid green", "width": "300px", "height": "43px"}}><HStack><LockIcon sx={{"color": "green", "fontSize": "12px"}}/>
-<Input placeholder="PassWord"
-focusBorderColor="black"
+<Input focusBorderColor="black"
 type="text"
+placeholder="PassWord"
 sx={{"border": "0px", "fontWeight": "semibold", "fontSize": "13px", "type": "password"}}/></HStack></Container>
 <Button sx={{"float": "right"}}><Text sx={{"fontSize": "12px", "color": "blue", "textAlign": "end"}}>{`비밀번호를 잊어버리셨나요?`}</Text></Button>
 <Container sx={{"height": "55px"}}/>

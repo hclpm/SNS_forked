@@ -58,7 +58,7 @@ def index():
             ),
             pc.container(
                 pc.image(
-                    src="favicon.ico",
+                    src="stardark.ico",
                     alt="star",
                     style={"width": "100px", "height": "120px"},
                 ),

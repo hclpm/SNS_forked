@@ -57,14 +57,14 @@ sx={{"width": "500px", "height": "75vh", "bg": "#ffffff", "borderRadius": "15px"
 <Container centerContent={true}><Image src="stardark.ico"
 sx={{"width": "100px", "height": "120px", "alt": "star"}}/></Container>
 <Container sx={{"borderBottom": "0.3px solid green", "width": "300px", "height": "43px"}}><HStack><EmailIcon sx={{"color": "green", "fontSize": "12px"}}/>
-<Input type="text"
+<Input placeholder="Email"
 focusBorderColor="black"
-placeholder="Email"
+type="text"
 sx={{"border": "0px", "fontWeight": "semibold", "fontSize": "13px", "type": ""}}/></HStack></Container>
 <Container sx={{"borderBottom": "0.3px solid green", "width": "300px", "height": "43px"}}><HStack><LockIcon sx={{"color": "green", "fontSize": "12px"}}/>
-<Input type="text"
+<Input placeholder="PassWord"
 focusBorderColor="black"
-placeholder="PassWord"
+type="text"
 sx={{"border": "0px", "fontWeight": "semibold", "fontSize": "13px", "type": "password"}}/></HStack></Container>
 <Button sx={{"float": "right"}}><Text sx={{"fontSize": "12px", "color": "black", "textAlign": "end"}}>{`비밀번호를 잊어버리셨나요?`}</Text></Button>
 <Container sx={{"height": "55px"}}/>

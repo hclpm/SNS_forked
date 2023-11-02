@@ -89,8 +89,8 @@ export default function Component() {
 
   return (
   <Fragment><Fragment>
-  <Container centerContent={true} sx={{"justifyContent": "center", "maxWidth": "auto", "height": "100vh", "bg": "#edccaf"}}>
-  <Container centerContent={true} sx={{"width": "500px", "height": "75vh", "bg": "rgba(255,255,255,0.3)", "borderRadius": "15px", "boxShadow": "-11px 11px 50px #000000"}}>
+  <Container centerContent={true} sx={{"background-image": "url('space.jpg')", "background-size": "cover", "background-repeat": "no-repeat", "justifyContent": "center", "maxWidth": "auto", "height": "100vh"}}>
+  <Container centerContent={true} sx={{"width": "500px", "height": "75vh", "bg": "rgba(255,255,255,0.8)", "borderRadius": "15px", "boxShadow": "-11px 11px 50px #d3e8e5"}}>
   <VStack>
   <Container sx={{"height": "75px"}}/>
   <Container>
@@ -110,7 +110,6 @@ export default function Component() {
   <Container sx={{"height": "30px"}}/>
   <Image src="stardark.ico" sx={{"width": "120px", "height": "120px", "alt": "star"}}/>
 </Container>
-  <Container sx={{"height": "50px"}}/>
   <Container sx={{"borderBottom": "0.3px solid green", "width": "300px", "height": "43px"}}>
   <HStack>
   <EmailIcon sx={{"color": "green", "fontSize": "12px"}}/>
@@ -128,7 +127,6 @@ export default function Component() {
   {`비밀번호를 잊어버리셨나요?`}
 </Text>
 </Button>
-  <Container sx={{"height": "55px"}}/>
   <HStack>
   <Button colorScheme="black">
   <Text sx={{"color": "black", "fontSize": "13px", "weight": "bolder"}}>

@@ -65,7 +65,6 @@ def index():
                 ),
                 center_content=True,
             ),
-            pc.container(height='50px'),
             get_input_field('Email','Email',''),
             get_input_field('Lock','Password','password'),
             pc.button(
@@ -82,7 +81,6 @@ def index():
                 },
                 color_scheme = 'black'
             ),
-            pc.container(height='55px'),
             pc.hstack(
                 pc.button(
                     pc.text(
@@ -114,9 +112,9 @@ def index():
         width ='500px',
         height='75vh',
         center_content=True,
-        bg = 'rgba(255,255,255,0.3)',
+        bg = 'rgba(255,255,255,0.8)',
         borderRadius='15px',
-        boxShadow='-11px 11px 50px #000000'
+        boxShadow='-11px 11px 50px #d3e8e5'
     )
 
     _main = pc.container(
@@ -126,7 +124,11 @@ def index():
         maxWidth='auto',
         #width='80vh' 가로 길이
         height='100vh', #세로 길이
-        bg='#edccaf', #배경 색상
+        style={
+        'background-image': "url('space.jpg')",
+        'background-size': 'cover',  # 배경 이미지 크기 조절
+        'background-repeat': 'no-repeat',  # 배경 이미지 반복 제거
+        },
     )
     return _main
 

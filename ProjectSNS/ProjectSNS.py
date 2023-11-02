@@ -57,15 +57,17 @@ def index():
                 ),
             ),
             pc.container(
+                pc.container(height='30px'),
                 pc.image(
                     src="stardark.ico",
                     alt="star",
-                    style={"width": "100px", "height": "120px"},
+                    style={"width": "120px", "height": "120px"},
                 ),
                 center_content=True,
             ),
+            pc.container(height='50px'),
             get_input_field('Email','Email',''),
-            get_input_field('Lock','PassWord','password'),
+            get_input_field('Lock','Password','password'),
             pc.button(
                 pc.text(
                     '비밀번호를 잊어버리셨나요?',
@@ -78,6 +80,7 @@ def index():
                 style = {
                     'float':'right',
                 },
+                color_scheme = 'black'
             ),
             pc.container(height='55px'),
             pc.hstack(
@@ -90,7 +93,7 @@ def index():
                             'weight':'bolder',
                         },
                     ),
-                    color_scheme='blue',
+                    color_scheme='black',
                 ),
                 pc.container(width='130px'),
                 pc.button(
@@ -103,17 +106,17 @@ def index():
                             'textAlign':'end',
                         },
                     ),
-                    color_scheme='blue',
-                )
+                    color_scheme='black',
+                ),
             ),
         ),
         
         width ='500px',
         height='75vh',
         center_content=True,
-        bg = '#ffffff',
+        bg = 'rgba(255,255,255,0.3)',
         borderRadius='15px',
-        boxShadow='-11px 11px 50px #9ecadb'
+        boxShadow='-11px 11px 50px #000000'
     )
 
     _main = pc.container(
@@ -123,7 +126,7 @@ def index():
         maxWidth='auto',
         #width='80vh' 가로 길이
         height='100vh', #세로 길이
-        bg='#000000', #배경 색상
+        bg='#edccaf', #배경 색상
     )
     return _main
 

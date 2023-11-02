@@ -89,8 +89,8 @@ export default function Component() {
 
   return (
   <Fragment><Fragment>
-  <Container centerContent={true} sx={{"justifyContent": "center", "maxWidth": "auto", "height": "100vh", "bg": "#000000"}}>
-  <Container centerContent={true} sx={{"width": "500px", "height": "75vh", "bg": "#ffffff", "borderRadius": "15px", "boxShadow": "-11px 11px 50px #9ecadb"}}>
+  <Container centerContent={true} sx={{"justifyContent": "center", "maxWidth": "auto", "height": "100vh", "bg": "#edccaf"}}>
+  <Container centerContent={true} sx={{"width": "500px", "height": "75vh", "bg": "rgba(255,255,255,0.3)", "borderRadius": "15px", "boxShadow": "-11px 11px 50px #000000"}}>
   <VStack>
   <Container sx={{"height": "75px"}}/>
   <Container>
@@ -107,8 +107,10 @@ export default function Component() {
 </Text>
 </Container>
   <Container centerContent={true}>
-  <Image src="stardark.ico" sx={{"width": "100px", "height": "120px", "alt": "star"}}/>
+  <Container sx={{"height": "30px"}}/>
+  <Image src="stardark.ico" sx={{"width": "120px", "height": "120px", "alt": "star"}}/>
 </Container>
+  <Container sx={{"height": "50px"}}/>
   <Container sx={{"borderBottom": "0.3px solid green", "width": "300px", "height": "43px"}}>
   <HStack>
   <EmailIcon sx={{"color": "green", "fontSize": "12px"}}/>
@@ -118,23 +120,23 @@ export default function Component() {
   <Container sx={{"borderBottom": "0.3px solid green", "width": "300px", "height": "43px"}}>
   <HStack>
   <LockIcon sx={{"color": "green", "fontSize": "12px"}}/>
-  <Input focusBorderColor="black" placeholder="PassWord" sx={{"border": "0px", "fontWeight": "semibold", "fontSize": "13px", "type": "password"}} type="text"/>
+  <Input focusBorderColor="black" placeholder="Password" sx={{"border": "0px", "fontWeight": "semibold", "fontSize": "13px", "type": "password"}} type="text"/>
 </HStack>
 </Container>
-  <Button sx={{"float": "right"}}>
+  <Button colorScheme="black" sx={{"float": "right"}}>
   <Text sx={{"fontSize": "12px", "color": "black", "textAlign": "end"}}>
   {`비밀번호를 잊어버리셨나요?`}
 </Text>
 </Button>
   <Container sx={{"height": "55px"}}/>
   <HStack>
-  <Button colorScheme="blue">
+  <Button colorScheme="black">
   <Text sx={{"color": "black", "fontSize": "13px", "weight": "bolder"}}>
   {`회원가입`}
 </Text>
 </Button>
   <Container sx={{"width": "130px"}}/>
-  <Button colorScheme="blue">
+  <Button colorScheme="black">
   <Text sx={{"color": "black", "fontSize": "13px", "weight": "bolder", "textAlign": "end"}}>
   {`로그인`}
 </Text>

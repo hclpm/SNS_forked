@@ -64,8 +64,8 @@ def index():
                 ),
                 center_content=True,
             ),
-            get_input_field('EmailIcon','Email',''),
-            get_input_field('LockIcon','PassWord','password'),
+            get_input_field('Email','Email',''),
+            get_input_field('Lock','PassWord','password'),
             pc.button(
                 pc.text(
                     '비밀번호를 잊어버리셨나요?',

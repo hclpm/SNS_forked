@@ -29,13 +29,13 @@ def index():
             pc.container(height= '75px'),
             pc.container(
                 pc.text(
-                    'ONESTARGRAM',
+                    'MOSAIC',
                     style= {
-                        "fontSize": "25px",
+                        "fontSize": "30px",
                         "fontWeight": "bolder",
                         "letterSpacing": "5px",
-                        "fontFamily": "Georgia, Serif",
-                        "background": "-webkit-linear-gradient(-45deg, #fa0000, #f0b46c)",
+                        "fontFamily": "Open Sans,Sans-serif",
+                        "background": "-webkit-linear-gradient(-45deg, #035a8a, #078f15)",
                         "-webkit-background-clip": "text",
                         "color": "transparent",
                     },
@@ -44,13 +44,12 @@ def index():
             ),
         ),
         pc.vstack(
-            pc.container(height= '10px'),
+            pc.container(height= '5px'),
             pc.container(
-                pc.text(
-                    'Start a strong social network service!',
+                pc.text('Create a picture with your story!',
                     style= {
                         "fontSize": "15px",
-                        "letterSpacing": "2px",
+                        "letterSpacing": "3.5px",
                         "color": 'black'
                     },
                     center_content =True,
@@ -59,19 +58,20 @@ def index():
             pc.container(
                 pc.container(height='30px'),
                 pc.image(
-                    src="stardark.ico",
+                    src="mosaic.ico",
                     alt="star",
-                    style={"width": "120px", "height": "120px"},
+                    style={"width": "100px", "height": "100px"},
                 ),
                 center_content=True,
             ),
             get_input_field('Email','Email',''),
             get_input_field('Lock','Password','password'),
+            pc.container(height = '20px'),
             pc.button(
                 pc.text(
-                    '비밀번호를 잊어버리셨나요?',
+                    'Log In',
                     style = {
-                        'fontSize':'12px',
+                        'fontSize':'20px',
                         'color':'black',
                         'textAlign':'end',
                     },
@@ -81,6 +81,7 @@ def index():
                 },
                 color_scheme = 'black'
             ),
+            pc.container(height='50px'),
             pc.hstack(
                 pc.button(
                     pc.text(
@@ -93,10 +94,10 @@ def index():
                     ),
                     color_scheme='black',
                 ),
-                pc.container(width='130px'),
+                pc.container(width='20px'),
                 pc.button(
                     pc.text(
-                        '로그인',
+                        'ID찾기',
                         style={
                             'color':'black',
                             'fontSize':'13px',
@@ -105,6 +106,19 @@ def index():
                         },
                     ),
                     color_scheme='black',
+                ),                 
+                pc.container(width='20px'),
+                pc.button(
+                    pc.text(
+                        '비밀번호찾기',
+                        style={
+                            'color':'black',
+                            'fontSize':'13px',
+                            'weight':'bolder',
+                            'textAlign':'end',
+                        },
+                    ),
+                    color_scheme='black', 
                 ),
             ),
         ),
@@ -112,9 +126,9 @@ def index():
         width ='500px',
         height='75vh',
         center_content=True,
-        bg = 'rgba(255,255,255,0.8)',
-        borderRadius='15px',
-        boxShadow='-11px 11px 50px #d3e8e5'
+        bg = 'rgba(255,255,255,0.9)',
+        borderRadius='20px',
+        boxShadow='9px 9px 50px #ceddf5'
     )
 
     _main = pc.container(
@@ -125,7 +139,7 @@ def index():
         #width='80vh' 가로 길이
         height='100vh', #세로 길이
         style={
-        'background-image': "url('space.jpg')",
+        'background-image': "url('mosaic.jpg')",
         'background-size': 'cover',  # 배경 이미지 크기 조절
         'background-repeat': 'no-repeat',  # 배경 이미지 반복 제거
         },

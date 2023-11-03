@@ -89,26 +89,26 @@ export default function Component() {
 
   return (
   <Fragment><Fragment>
-  <Container centerContent={true} sx={{"background-image": "url('space.jpg')", "background-size": "cover", "background-repeat": "no-repeat", "justifyContent": "center", "maxWidth": "auto", "height": "100vh"}}>
-  <Container centerContent={true} sx={{"width": "500px", "height": "75vh", "bg": "rgba(255,255,255,0.8)", "borderRadius": "15px", "boxShadow": "-11px 11px 50px #d3e8e5"}}>
+  <Container centerContent={true} sx={{"background-image": "url('mosaic.jpg')", "background-size": "cover", "background-repeat": "no-repeat", "justifyContent": "center", "maxWidth": "auto", "height": "100vh"}}>
+  <Container centerContent={true} sx={{"width": "500px", "height": "75vh", "bg": "rgba(255,255,255,0.9)", "borderRadius": "20px", "boxShadow": "9px 9px 50px #ceddf5"}}>
   <VStack>
   <Container sx={{"height": "75px"}}/>
   <Container>
-  <Text sx={{"fontSize": "25px", "fontWeight": "bolder", "letterSpacing": "5px", "fontFamily": "Georgia, Serif", "background": "-webkit-linear-gradient(-45deg, #fa0000, #f0b46c)", "-webkit-background-clip": "text", "color": "transparent", "centerContent": true}}>
-  {`ONESTARGRAM`}
+  <Text sx={{"fontSize": "30px", "fontWeight": "bolder", "letterSpacing": "5px", "fontFamily": "Open Sans,Sans-serif", "background": "-webkit-linear-gradient(-45deg, #035a8a, #078f15)", "-webkit-background-clip": "text", "color": "transparent", "centerContent": true}}>
+  {`MOSAIC`}
 </Text>
 </Container>
 </VStack>
   <VStack>
-  <Container sx={{"height": "10px"}}/>
+  <Container sx={{"height": "5px"}}/>
   <Container>
-  <Text sx={{"fontSize": "15px", "letterSpacing": "2px", "color": "black", "centerContent": true}}>
-  {`Start a strong social network service!`}
+  <Text sx={{"fontSize": "15px", "letterSpacing": "3.5px", "color": "black", "centerContent": true}}>
+  {`Create a picture with your story!`}
 </Text>
 </Container>
   <Container centerContent={true}>
   <Container sx={{"height": "30px"}}/>
-  <Image src="stardark.ico" sx={{"width": "120px", "height": "120px", "alt": "star"}}/>
+  <Image src="mosaic.ico" sx={{"width": "100px", "height": "100px", "alt": "star"}}/>
 </Container>
   <Container sx={{"borderBottom": "0.3px solid green", "width": "300px", "height": "43px"}}>
   <HStack>
@@ -122,21 +122,29 @@ export default function Component() {
   <Input focusBorderColor="black" placeholder="Password" sx={{"border": "0px", "fontWeight": "semibold", "fontSize": "13px", "type": "password"}} type="text"/>
 </HStack>
 </Container>
+  <Container sx={{"height": "20px"}}/>
   <Button colorScheme="black" sx={{"float": "right"}}>
-  <Text sx={{"fontSize": "12px", "color": "black", "textAlign": "end"}}>
-  {`비밀번호를 잊어버리셨나요?`}
+  <Text sx={{"fontSize": "20px", "color": "black", "textAlign": "end"}}>
+  {`Log In`}
 </Text>
 </Button>
+  <Container sx={{"height": "50px"}}/>
   <HStack>
   <Button colorScheme="black">
   <Text sx={{"color": "black", "fontSize": "13px", "weight": "bolder"}}>
   {`회원가입`}
 </Text>
 </Button>
-  <Container sx={{"width": "130px"}}/>
+  <Container sx={{"width": "20px"}}/>
   <Button colorScheme="black">
   <Text sx={{"color": "black", "fontSize": "13px", "weight": "bolder", "textAlign": "end"}}>
-  {`로그인`}
+  {`ID찾기`}
+</Text>
+</Button>
+  <Container sx={{"width": "20px"}}/>
+  <Button colorScheme="black">
+  <Text sx={{"color": "black", "fontSize": "13px", "weight": "bolder", "textAlign": "end"}}>
+  {`비밀번호찾기`}
 </Text>
 </Button>
 </HStack>

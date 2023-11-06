@@ -1,4 +1,24 @@
 import pynecone as pc
+import axios
+
+def MyComponent():
+    user_data = None
+    data_fetched = False  # 버튼을 클릭하여 데이터를 가져왔는지 여부를 나타내는 변수
+
+    async def fetchData():
+        try:
+            response = await axios.get('http://127.0.0.1:8000/users/1')
+            user_data = response.data  # 가져온 데이터를 저장
+            data_fetched = True  # 데이터를 성공적으로 가져왔음을 표시
+            pc.render()  # 데이터를 업데이트하고 컴포넌트를 다시 렌더링
+        except Exception as error:
+            pc.error('데이터를 가져오는 중 에러 발생:', error)
+
+    return pc.html.div(
+        pc.html.button("Log In", {"onClick": fetchData}),
+        # 데이터가 가져와진 경우에만 데이터 출력
+        pc.html.div(user_data) if data_fetched else None
+    )
 
 def get_input_field(icon: str, placeholder: str, _type: str):
     return pc.container(

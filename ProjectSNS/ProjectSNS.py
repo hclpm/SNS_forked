@@ -5,10 +5,10 @@ def get_input_field(icon: str, placeholder: str, _type: str):
         pc.hstack(
             pc.icon(
                 tag=icon,
-                color='green',
+                color='black',
                 fontSize='12px',
             ),
-            pc.input(
+            user_input = pc.input(
                 placeholder=placeholder,
                 border='0px',
                 focus_border_color='black',
@@ -17,7 +17,7 @@ def get_input_field(icon: str, placeholder: str, _type: str):
                 type=_type,
             ),
         ),
-        borderBottom='0.3px solid green',
+        borderBottom='0.2px solid black',
         width='300px',
         height='43px',
     )
@@ -39,13 +39,13 @@ def index():
             pc.container(height= '75px'),
             pc.container(
                 pc.text(
-                    'MOSAIC',
+                    'Aurora',
                     style= {
-                        "fontSize": "30px",
+                        "fontSize": "40px",
                         "fontWeight": "bolder",
                         "letterSpacing": "5px",
                         "fontFamily": "Open Sans,Sans-serif",
-                        "background": "-webkit-linear-gradient(-45deg, #035a8a, #078f15)",
+                        "background": "-webkit-linear-gradient(-45deg, #e04a3f, #4e8be6)",
                         "-webkit-background-clip": "text",
                         "color": "transparent",
                     },
@@ -60,7 +60,8 @@ def index():
                     style= {
                         "fontSize": "15px",
                         "letterSpacing": "3.5px",
-                        "color": 'black'
+                        "color": 'black',
+                        "font-family" : "Helvetica, Sans-serif",
                     },
                     center_content =True,
                 ),
@@ -74,15 +75,16 @@ def index():
                 ),
                 center_content=True,
             ),
+            pc.container(height='50px'),
             get_input_field('Email','Email',''),
             get_input_field('Lock','Password','password'),
             pc.container(height = '20px'),
             pc.button(
                 pc.text(
-                    'Log In',
+                    '로그인',
                     style = {
-                        'fontSize':'20px',
-                        'color':'black',
+                        'fontSize':'22px',
+                        'color':'green',
                         'textAlign':'end',
                     },
                 ),
@@ -137,7 +139,7 @@ def index():
         width ='500px',
         height='75vh',
         center_content=True,
-        bg = 'rgba(255,255,255,0.9)',
+        bg = 'rgba(255,255,255,0.7)',
         borderRadius='20px',
         boxShadow='9px 9px 50px #ceddf5'
     )
@@ -150,7 +152,7 @@ def index():
         #width='80vh' 가로 길이
         height='100vh', #세로 길이
         style={
-        'background-image': "url('mosaic.jpg')",
+        'background-image': "url('aurora.jpg')",
         'background-size': 'cover',  # 배경 이미지 크기 조절
         'background-repeat': 'no-repeat',  # 배경 이미지 반복 제거
         },

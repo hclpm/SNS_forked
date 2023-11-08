@@ -1,5 +1,4 @@
 import pynecone as pc
-import requests
 
 def get_input_field(icon: str, placeholder: str, _type: str):
     return pc.container(
@@ -23,6 +22,17 @@ def get_input_field(icon: str, placeholder: str, _type: str):
         height='43px',
     )
     
+import requests
+
+class State(pc.State):
+    def user_info(self):
+        url = 'http://163.152.224.167:3000/users/1'
+        user_id = requests.get(url).json()['email']
+        user_password=requests.get(url).json()['password']
+        print(user_id)
+        print(user_password)
+
+
 def index():
     login_container = pc.container(
         pc.vstack(
@@ -79,7 +89,8 @@ def index():
                 style = {
                     'float':'right',
                 },
-                color_scheme = 'black'
+                color_scheme = 'black',
+                on_click = State.user_info,
             ),
             pc.container(height='50px'),
             pc.hstack(
@@ -130,7 +141,7 @@ def index():
         borderRadius='20px',
         boxShadow='9px 9px 50px #ceddf5'
     )
-
+    
     _main = pc.container(
         login_container,
         center_content=True,
@@ -147,6 +158,6 @@ def index():
     return _main
 
 
-app = pc.App()
+app = pc.App(state=State)
 app.add_page(index)
 app.compile()

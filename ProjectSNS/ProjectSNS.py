@@ -8,7 +8,7 @@ def get_input_field(icon: str, placeholder: str, _type: str):
                 color='black',
                 fontSize='12px',
             ),
-            user_input = pc.input(
+            pc.input(
                 placeholder=placeholder,
                 border='0px',
                 focus_border_color='black',

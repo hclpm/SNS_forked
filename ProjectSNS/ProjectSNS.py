@@ -1,36 +1,25 @@
 import pynecone as pc
 
-def get_input_field(icon: str, placeholder: str, _type: str):
-    return pc.container(
-        pc.hstack(
-            pc.icon(
-                tag=icon,
-                color='black',
-                fontSize='12px',
-            ),
-            pc.input(
-                placeholder=placeholder,
-                border='0px',
-                focus_border_color='black',
-                fontWeight='semibold',
-                fontSize='13px',
-                type=_type,
-            ),
-        ),
-        borderBottom='0.2px solid black',
-        width='300px',
-        height='43px',
-    )
-    
-import requests
-
 class State(pc.State):
-    def user_info(self):
-        url = 'http://163.152.224.167:3000/users/1'
-        user_id = requests.get(url).json()['email']
-        user_password=requests.get(url).json()['password']
-        print(user_id)
-        print(user_password)
+    new_item1:str
+    new_item2:str
+    input_string1:str
+    input_string2:str
+    user_email:str
+    user_password:str
+    def add_info(self):
+        if self.new_item1 and self.new_item2:
+            self.user_email = self.new_item1
+            self.new_item1=""
+            self.user_password = self.new_item2
+            self.new_item2=""
+            print(self.user_email)
+            print(self.user_password)
+    def clear_input(self):
+        self.input_string1=""
+        self.input_string2=""
+            
+        
 
 
 def index():
@@ -76,8 +65,34 @@ def index():
                 center_content=True,
             ),
             pc.container(height='50px'),
-            get_input_field('Email','Email',''),
-            get_input_field('Lock','Password','password'),
+            pc.hstack(
+                pc.icon(
+                    tag='Email',
+                    color='black',
+                    fontSize='12px',
+                ),
+                pc.input(
+                    value=State.input_string1,
+                    on_change=State.set_input_string1,
+                    on_blur=State.set_new_item1,
+                    placeholder=r"Email",
+                    bg = 'rgba(255,255,255,0.7)',
+                ),
+            ),
+            pc.hstack(
+                pc.icon(
+                    tag='Lock',
+                    color='black',
+                    fontSize='12px',
+                ),
+                pc.input(
+                    value=State.input_string2,
+                    on_change=State.set_input_string2,
+                    on_blur=State.set_new_item2,
+                    placeholder=r"Password",
+                    bg = 'rgba(255,255,255,0.7)',
+                ),
+            ),
             pc.container(height = '20px'),
             pc.button(
                 pc.text(
@@ -92,7 +107,8 @@ def index():
                     'float':'right',
                 },
                 color_scheme = 'black',
-                on_click = State.user_info,
+                on_click=State.add_info,
+                on_mouse_up = State.clear_input,
             ),
             pc.container(height='50px'),
             pc.hstack(

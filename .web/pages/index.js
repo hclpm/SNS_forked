@@ -8,7 +8,7 @@ import NextHead from "next/head"
 
 
 export default function Component() {
-  const [state, setState] = useState({"is_hydrated": false, "events": [{"name": "state.hydrate"}], "files": []})
+  const [state, setState] = useState({"input_string1": "", "input_string2": "", "is_hydrated": false, "new_item1": "", "new_item2": "", "user_email": "", "user_password": "", "events": [{"name": "state.hydrate"}], "files": []})
   const [result, setResult] = useState({"state": null, "events": [], "final": true, "processing": false})
   const [notConnected, setNotConnected] = useState(false)
   const router = useRouter()
@@ -111,20 +111,16 @@ export default function Component() {
   <Image src="mosaic.ico" sx={{"width": "100px", "height": "100px", "alt": "star"}}/>
 </Container>
   <Container sx={{"height": "50px"}}/>
-  <Container sx={{"borderBottom": "0.2px solid black", "width": "300px", "height": "43px"}}>
   <HStack>
   <EmailIcon sx={{"color": "black", "fontSize": "12px"}}/>
-  <Input focusBorderColor="black" placeholder="Email" sx={{"border": "0px", "fontWeight": "semibold", "fontSize": "13px", "type": ""}} type="text"/>
+  <Input onBlur={_e => Event([E("state.set_new_item1", {value:_e.target.value})], _e)} onChange={_e => Event([E("state.set_input_string1", {value:_e.target.value})], _e)} placeholder="Email" sx={{"bg": "rgba(255,255,255,0.7)"}} type="text" value={state.input_string1}/>
 </HStack>
-</Container>
-  <Container sx={{"borderBottom": "0.2px solid black", "width": "300px", "height": "43px"}}>
   <HStack>
   <LockIcon sx={{"color": "black", "fontSize": "12px"}}/>
-  <Input focusBorderColor="black" placeholder="Password" sx={{"border": "0px", "fontWeight": "semibold", "fontSize": "13px", "type": "password"}} type="text"/>
+  <Input onBlur={_e => Event([E("state.set_new_item2", {value:_e.target.value})], _e)} onChange={_e => Event([E("state.set_input_string2", {value:_e.target.value})], _e)} placeholder="Password" sx={{"bg": "rgba(255,255,255,0.7)"}} type="text" value={state.input_string2}/>
 </HStack>
-</Container>
   <Container sx={{"height": "20px"}}/>
-  <Button colorScheme="black" onClick={_e => Event([E("state.user_info", {})], _e)} sx={{"float": "right"}}>
+  <Button colorScheme="black" onClick={_e => Event([E("state.add_info", {})], _e)} onMouseUp={_e => Event([E("state.clear_input", {})], _e)} sx={{"float": "right"}}>
   <Text sx={{"fontSize": "22px", "color": "green", "textAlign": "end"}}>
   {`로그인`}
 </Text>

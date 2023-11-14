@@ -18,11 +18,8 @@ class State(pc.State):
     def clear_input(self):
         self.input_string1=""
         self.input_string2=""
-            
         
-
-
-def index():
+class login_container():
     login_container = pc.container(
         pc.vstack(
             pc.container(height= '75px'),
@@ -159,9 +156,11 @@ def index():
         borderRadius='20px',
         boxShadow='9px 9px 50px #ceddf5'
     )
-    
+            
+
+def index():
     _main = pc.container(
-        login_container,
+        login_container.login_container,
         center_content=True,
         justifyContent='center',
         maxWidth='auto',

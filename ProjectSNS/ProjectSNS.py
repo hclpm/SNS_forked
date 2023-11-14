@@ -150,7 +150,7 @@ class login_container():
         ),
         
         width ='500px',
-        height='75vh',
+        height='auto',
         center_content=True,
         bg = 'rgba(255,255,255,0.7)',
         borderRadius='20px',
@@ -164,6 +164,7 @@ def index():
         center_content=True,
         justifyContent='center',
         maxWidth='auto',
+        maxHeight='auto',
         #width='80vh' 가로 길이
         height='100vh', #세로 길이
         style={

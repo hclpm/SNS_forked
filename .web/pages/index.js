@@ -89,8 +89,8 @@ export default function Component() {
 
   return (
   <Fragment><Fragment>
-  <Container centerContent={true} sx={{"background-image": "url('aurora.jpg')", "background-size": "cover", "background-repeat": "no-repeat", "justifyContent": "center", "maxWidth": "auto", "height": "100vh"}}>
-  <Container centerContent={true} sx={{"width": "500px", "height": "75vh", "bg": "rgba(255,255,255,0.7)", "borderRadius": "20px", "boxShadow": "9px 9px 50px #ceddf5"}}>
+  <Container centerContent={true} sx={{"background-image": "url('aurora.jpg')", "background-size": "cover", "background-repeat": "no-repeat", "justifyContent": "center", "maxWidth": "auto", "maxHeight": "auto", "height": "100vh"}}>
+  <Container centerContent={true} sx={{"width": "500px", "height": "auto", "bg": "rgba(255,255,255,0.7)", "borderRadius": "20px", "boxShadow": "9px 9px 50px #ceddf5"}}>
   <VStack>
   <Container sx={{"height": "75px"}}/>
   <Container>
